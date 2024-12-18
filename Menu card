@@ -1,0 +1,49 @@
+
+import java.util.Scanner;
+
+public class MEnu {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+       
+        System.out.println("Welcome to the Restaurant ");
+        System.out.println("Here is the menu:");
+        System.out.println("1. Burger - 130rs");
+        System.out.println("2. Pizza - 200rs");
+        System.out.println("3. Pasta - 150rs");
+        System.out.println("4. Salad - 100rs");
+        System.out.println("5. Soda - 120rs");
+        
+        double total = 0;
+        int choice;
+        
+        do {
+            System.out.print("Please enter the item number to order and 0 to exit: ");
+            choice = scanner.nextInt();
+            
+            if (choice == 1) {
+                total += 130;
+                System.out.println("Added Burger to your order.");
+            } else if (choice == 2) {
+                total += 200;
+                System.out.println("Added Pizza to your order.");
+            } else if (choice == 3) {
+                total += 150;
+                System.out.println("Added Pasta to your order.");
+            } else if (choice == 4) {
+                total += 100;
+                System.out.println("Added Salad to your order.");
+            } else if (choice == 5) {
+                total += 120;
+                System.out.println("Added Soda to your order.");
+            } else {
+                System.out.println("Invalid choice. Please try again.");
+            }
+        } while (choice != 0);
+        
+        System.out.println("Your total bill is:"+ total);
+        System.out.println("Thank you for your order!");
+        
+      
+    }
+}
