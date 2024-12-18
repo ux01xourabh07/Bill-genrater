@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class MarkSheet {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the student's name: ");
+        String Name = sc.nextLine();
+
+        
+        System.out.print("Enter marks of Hindi : ");
+        int subject1 = sc.nextInt();
+        System.out.print("Enter marks of English : ");
+        int subject2 = sc.nextInt();
+        System.out.print("Enter marks of Maths : ");
+        int subject3 = sc.nextInt();
+        System.out.print("Enter marks of Physics : ");
+        int subject4 = sc.nextInt();
+        System.out.print("Enter marks of Chemistry: ");
+        int subject5 = sc.nextInt();
+
+        
+        int totalMarks = subject1 + subject2 + subject3 + subject4 + subject5;
+        double average = totalMarks / 5.0;
+
+       
+        System.out.println("\nMark Sheet for " + Name);
+        System.out.println("********************************************************");
+        System.out.println("Hindi : " + subject1);
+        System.out.println("English : " + subject2);
+        System.out.println("Maths : " + subject3);
+        System.out.println("Physics : " + subject4);
+        System.out.println("Chemistry : " + subject5);
+        System.out.println("Total Marks: " + totalMarks);
+        System.out.println("Average Marks: " + average);
+
+        
+        if (average >= 90) {
+            System.out.println("Grade: A+");
+        } else if (average >= 80) {
+            System.out.println("Grade: A");
+        } else if (average >= 70) {
+            System.out.println("Grade: B");
+        } else if (average >= 60) {
+            System.out.println("Grade: C");
+        } else if (average >= 50) {
+            System.out.println("Grade: D");
+        } else {
+            System.out.println("Grade: F");
+        }
+
+        
+    }
+}
