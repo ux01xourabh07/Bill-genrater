@@ -1,0 +1,96 @@
+ import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int ATMpin = 1234;
+        int currentBalance = 1000;
+
+        while (true) {
+            System.out.println("\nWelcome to the ATM");
+            System.out.println("1. Check Balance");
+            System.out.println("2. Deposit Money");
+            System.out.println("3. Withdraw Money");
+            System.out.println("4. Exit");
+            System.out.println("**************************************************************************************************************");
+      
+            System.out.println("Please select an option: ");
+           int choice = scanner.nextInt();
+            
+            
+        switch (choice) {
+            case 1: {
+                System.out.print("ENter your ATM pin: ");
+                int Userid = scanner.nextInt();
+
+                if(ATMpin == Userid){
+                System.out.println("Your current balance is: "+currentBalance);
+                System.out.println("Thank u for using of ATM");  
+                }  
+                else{
+                    System.out.println("Invalid pin");
+                }                                                        
+            }
+            System.out.println("****************************************************************************************************");
+                break;
+            case 2: {
+                System.out.print("ENter your ATM pin: ");
+                int Userid = scanner.nextInt();
+
+                if(ATMpin == Userid){
+                System.out.println("");
+                System.out.println("");
+                System.out.println("HOW MUCH U WANT TO DEPOSIT");
+                System.out.println("************************************************************************************");
+                int a = scanner.nextInt();
+                currentBalance += a;
+                System.err.println("Balance will be : "+currentBalance);  
+                System.out.println("Thank u for using of ATM"); 
+                }
+                else{
+                    System.out.println("Invalid pin");
+                }                                                                                            
+            }
+            System.out.println("***************************************************************************************************");
+                
+                break;
+            case 3: {
+                System.out.print("ENter your ATM pin: ");
+                int Userid = scanner.nextInt();
+
+
+                if(ATMpin == Userid){
+                System.out.println("");
+                System.out.println("");
+                System.out.println("HOW MUCH U WANT TO CREADIT");
+                System.out.println("************************************************************************************");
+                int a = scanner.nextInt();
+                currentBalance -= a;
+                System.err.println("Balance will be : "+currentBalance);  
+                System.out.println("Thank u for using of ATM"); 
+                }
+                else{
+                    System.out.println("Invalid pin");
+                    System.out.println("Thank u for using of ATM");
+                }                                                                                            
+            }
+            System.out.println("***************************************************************************************************");
+                
+                break;
+            case 4: {
+               System.out.println("Visit Again...");                                                                                          
+            }
+            System.out.println("***************************************************************************************************");
+                
+                break;
+            default:{
+                System.out.println("Invalid choice");
+            }
+            
+              
+        }
+           
+        }
+    }
+}
+
